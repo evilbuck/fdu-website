@@ -1,0 +1,70 @@
+[00:20:43.672] Server  ERROR   ⨯ TurbopackInternalError: Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+  
+  Caused by:
+      0: Looking up data for TaskId 111935 from database failed
+      1: Unable to open static sorted file referenced from 00000446.meta
+      2: Unable to open static sorted file 00000440.sst
+      3: No such file or directory (os error 2)
+[00:20:43.677] Server  ERROR   TurbopackInternalError: Failed to write app endpoint /page
+
+Caused by:
+- [project]/app/globals.css [app-client] (css)
+- Failed to restore task data (corrupted database or bug): Meta for <DiskFileSystem as FileSystem>::read (TaskId 111927))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <AppEndpoint as Endpoint>::output failed
+- Failed to write app endpoint /page
+- Execution of AppEndpoint::output failed
+- Execution of AppProject::app_module_graphs failed
+- Execution of *<AppEndpoint as Endpoint>::additional_entries failed
+- Execution of *ModuleGraph::from_graphs failed
+- Execution of SingleModuleGraph::new_with_entries_visited_intern failed
+- [project]/app/globals.css [app-client] (css)
+- Execution of primary_chunkable_referenced_modules failed
+- Execution of <CssModuleAsset as Module>::references failed
+- Execution of parse_css failed
+- Execution of <PostCssTransformedAsset as Asset>::content failed
+- Execution of PostCssTransformedAsset::process failed
+- Execution of evaluate_webpack_loader failed
+- Failed to restore task data (corrupted database or bug): Meta for <DiskFileSystem as FileSystem>::read (TaskId 111927))
+  
+  Caused by:
+      0: Looking up data for TaskId 111927 from database failed
+      1: Unable to open static sorted file referenced from 00000586.meta
+      2: Unable to open static sorted file 00000580.sst
+      3: No such file or directory (os error 2)
+[00:20:43.679] Server  ERROR   ⨯ TurbopackInternalError: Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+  
+  Caused by:
+      0: Looking up data for TaskId 111935 from database failed
+      1: Unable to open static sorted file referenced from 00000446.meta
+      2: Unable to open static sorted file 00000440.sst
+      3: No such file or directory (os error 2)
+[00:20:43.681] Server  ERROR   TurbopackInternalError: Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to restore task data (corrupted database or bug): Meta for PageEndpoint::output (TaskId 111935))
+  
+  Caused by:
+      0: Looking up data for TaskId 111935 from database failed
+      1: Unable to open static sorted file referenced from 00000446.meta
+      2: Unable to open static sorted file 00000440.sst
+      3: No such file or directory (os error 2)
+[00:20:43.715] Server  LOG     ✓ Compiled in 126ms
