@@ -47,6 +47,16 @@
 - Shared components: PascalCase (`ContactForm.tsx`)
 - Route handlers: `route.ts`
 
+### Animations
+- Use `motion` library (Framer Motion successor) for React animations
+- Import: `import { motion } from "motion/react";`
+- Scroll animations: Use `whileInView` with `viewport={{ once: true, margin: "-100px" }}`
+- Stagger children using `variants` with parent `staggerChildren` transition
+- Easing: Use `[0.25, 0.1, 0.25, 1] as const` for smooth ease-out
+- Duration: 0.5-0.6s for most transitions, 0.1-0.15s stagger delays
+- Hover effects: Use `whileHover` prop for smooth interactions
+- Keep all section components as Client Components (`"use client"`) for animation support
+
 ## External Services
 - None currently configured (contact form logs to console)
 - Phone: (925) 676-4444

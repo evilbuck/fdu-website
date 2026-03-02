@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, HardHat, Radio, ClipboardCheck, Wrench } from "lucide-react";
+import { motion } from "motion/react";
 
 const services = [
   {
@@ -34,12 +35,41 @@ const services = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1] as const,
+    },
+  },
+};
+
 export default function ServiceCards() {
   return (
     <section className="py-16 md:py-24 bg-[#F8FAFC]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">
             Comprehensive Fire Safety Solutions
           </h2>
@@ -47,19 +77,31 @@ export default function ServiceCards() {
             From initial design through ongoing maintenance, we're your single partner 
             for complete fire alarm and life safety systems.
           </p>
-        </div>
+        </motion.div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E2E8F0] hover:border-[#FF6B35]/30"
+              variants={cardVariants}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-lg bg-[#1B365D]/10 flex items-center justify-center mb-4 group-hover:bg-[#FF6B35]/10 transition-colors">
+              <motion.div 
+                className="w-14 h-14 rounded-lg bg-[#1B365D]/10 flex items-center justify-center mb-4 group-hover:bg-[#FF6B35]/10 transition-colors"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <service.icon className="h-7 w-7 text-[#1B365D] group-hover:text-[#FF6B35] transition-colors" />
-              </div>
+              </motion.div>
 
               {/* Title */}
               <h3 className="text-xl font-bold text-[#1B365D] mb-3">
@@ -91,12 +133,18 @@ export default function ServiceCards() {
                 Learn More
                 <ArrowRight className="ml-1 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <Link
             href="/services"
             className="inline-flex items-center text-[#1B365D] font-semibold hover:text-[#FF6B35] transition-colors"
@@ -104,7 +152,7 @@ export default function ServiceCards() {
             View All Services
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

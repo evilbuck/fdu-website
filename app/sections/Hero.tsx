@@ -3,6 +3,30 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1] as const,
+    },
+  },
+};
 
 export default function Hero() {
   return (
@@ -14,32 +38,79 @@ export default function Hero() {
         }} />
       </div>
       
+      {/* Decorative Elements with Animations */}
+      <motion.div 
+        className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FF6B35]/10 to-transparent hidden lg:block"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      />
+      <motion.div 
+        className="absolute top-20 right-20 w-64 h-64 bg-[#FF6B35]/5 rounded-full blur-3xl"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      />
+      <motion.div
+        className="absolute top-40 right-40 w-32 h-32 bg-[#FF6B35]/10 rounded-full blur-2xl hidden lg:block"
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="py-20 md:py-28 lg:py-32">
-          <div className="max-w-3xl">
+          <motion.div 
+            className="max-w-3xl"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-[#FF6B35] rounded-full mr-2 animate-pulse"></span>
+            <motion.div 
+              className="inline-flex items-center px-3 py-1 rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-medium mb-6"
+              variants={itemVariants}
+            >
+              <motion.span 
+                className="w-2 h-2 bg-[#FF6B35] rounded-full mr-2"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [1, 0.7, 1]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
               Veteran-Owned • NICET Level IV Certified
-            </div>
+            </motion.div>
             
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              variants={itemVariants}
+            >
               Making Fire Alarm Simple for{" "}
               <span className="text-[#FF6B35]">Bay Area Businesses</span>{" "}
               Since 2001
-            </h1>
+            </motion.h1>
             
             {/* Subhead */}
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
+            <motion.p 
+              className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl"
+              variants={itemVariants}
+            >
               Design-build fire alarm systems, 24/7 monitoring, and comprehensive 
               life safety services from Concord to Sacramento. One partner for 
               design, installation, and ongoing support.
-            </p>
+            </motion.p>
             
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4"
+              variants={itemVariants}
+            >
               <Button 
                 size="lg"
                 className="bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-semibold text-base px-8 py-6 group"
@@ -62,44 +133,57 @@ export default function Hero() {
                   (925) 676-4444
                 </a>
               </Button>
-            </div>
+            </motion.div>
             
             {/* Trust Indicators */}
-            <div className="mt-10 pt-6 border-t border-white/20">
-              <div className="flex flex-wrap items-center gap-6 text-sm text-white/80">
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  C-10 Licensed
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  NICET Level IV
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  UL Listed
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Autocall Elite Partner
-                </div>
-              </div>
-            </div>
-          </div>
+            <motion.div 
+              className="mt-10 pt-6 border-t border-white/20"
+              variants={itemVariants}
+            >
+              <motion.div 
+                className="flex flex-wrap items-center gap-6 text-sm text-white/80"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.1,
+                      delayChildren: 0.8,
+                    },
+                  },
+                }}
+              >
+                {[
+                  "C-10 Licensed",
+                  "NICET Level IV",
+                  "UL Listed",
+                  "Autocall Elite Partner",
+                ].map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    className="flex items-center"
+                    variants={{
+                      hidden: { opacity: 0, x: -10 },
+                      visible: { 
+                        opacity: 1, 
+                        x: 0,
+                        transition: { duration: 0.4 }
+                      },
+                    }}
+                  >
+                    <svg className="w-5 h-5 mr-2 text-[#FF6B35]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {item}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FF6B35]/10 to-transparent hidden lg:block" />
-      <div className="absolute top-20 right-20 w-64 h-64 bg-[#FF6B35]/5 rounded-full blur-3xl" />
     </section>
   );
 }
