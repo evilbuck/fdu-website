@@ -3,3 +3,13 @@
 2026-03-02T21:23:55.149147Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
 2026-03-02T21:23:55.149156Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
 2026-03-02T21:23:55.149161Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:28:25.154150Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="/home/buckleyrobinson/projects/fdu-website"
+2026-03-02T21:28:25.154181Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
+2026-03-02T21:28:25.154189Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-03-02T21:28:25.154194Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:28:25.154215Z  INFO ralph_core::event_loop: Injecting scratchpad (2743 chars) into prompt
+2026-03-02T21:30:14.015927Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="/home/buckleyrobinson/projects/fdu-website"
+2026-03-02T21:30:14.015954Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
+2026-03-02T21:30:14.015963Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-03-02T21:30:14.015968Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:30:14.015995Z  INFO ralph_core::event_loop: Injecting scratchpad (4511 chars) into prompt
