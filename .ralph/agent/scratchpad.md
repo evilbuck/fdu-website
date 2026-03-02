@@ -124,29 +124,87 @@ Decision: Creating as Next.js page component with reusable section components fo
 - Route registered: /general-contractors
 - No TypeScript or build errors
 
-## Current Iteration: Property Managers Landing Page
+## Task Completed: Property Managers Landing Page
 
-**Objective:** Create the Property Managers persona landing page at `/property-managers`
+**Status:** ✅ Complete and committed (998cb9c)
 
-**PRD Requirements:**
-URL: `/property-managers`
-Title: Fire Alarm Maintenance & Monitoring for Property Managers | FDU
-Focus: Non-proprietary systems, 24/7 monitoring, compliance/liability reduction, maintenance programs, ROI/total cost of ownership
+**What was built:**
+- `/property-managers/page.tsx` - Full persona landing page
+- 446 lines of TypeScript/React
+- 7 sections per PRD specification
+- Netlify Forms compatible with proper form attributes
 
-**Key sections to implement:**
-1. Hero with PM-specific headline about reducing costs and liability
+**Key sections implemented:**
+1. Hero with PM-specific headline: "Reduce Operating Costs & Liability with Non-Proprietary Systems"
 2. Pain Point Solution Grid:
-   - Proprietary system lock-in vs non-proprietary freedom
-   - False alarms disrupting tenants vs false alarm prevention
+   - Proprietary lock-in vs Non-proprietary freedom
+   - False alarms disrupting tenants vs False Alarm prevention
    - After-hours emergencies with no support vs 24/7 monitoring
-3. Process Overview (maintenance-focused)
-4. Case Study Highlight (multi-building portfolio example)
-5. Trust Elements
-6. FAQ Section
-7. Conversion Form with PM-specific fields
+3. Process Overview (4 steps: Assessment → Maintenance Plan → 24/7 Monitoring → Ongoing Service)
+4. Case Study Highlight (12-building portfolio with 35% cost savings, 99.2% uptime)
+5. Trust Elements (Non-Proprietary, 24/7 Monitoring, Full Compliance, Multi-Building)
+6. FAQ Section (4 items: proprietary vs non-proprietary, cost savings, emergency response, compliance)
+7. Conversion Form with PM-specific fields:
+   - Building count selector (1, 2-5, 6-10, 10+)
+   - Service type selector (Monitoring, Maintenance, New System, etc.)
 
-**Pattern:** Following same 7-section structure as General Contractors page, but with Property Manager-focused messaging and content.
+**Technical decisions:**
+- Followed same 7-section structure as GC page for consistency
+- Used client-side interactivity for FAQ accordion (useState)
+- Form includes hidden field for Netlify form detection (name="pm-quote")
+- PM-specific form fields to better qualify leads
+- Responsive grid layouts throughout
+- Brand colors strictly maintained (Navy #1B365D, Orange #FF6B35)
+- Lucide React icons for consistency
 
-**Confidence:** 95% - Clear requirements, established pattern from GC page
+**Remaining persona pages to create:**
+- /engineers (current task)
+- /government
 
-**Next:** Will build page following the established component structure and brand guidelines.
+**Build verification:**
+- Static export: SUCCESS
+- Routes registered: /general-contractors, /property-managers
+- No TypeScript or build errors
+- dist/property-managers/index.html generated (34.5KB)
+
+**Persona messaging differences captured:**
+- GC page: Focus on Design-Build, project schedules, first-time inspections
+- PM page: Focus on non-proprietary systems, cost reduction, 24/7 monitoring, compliance
+- Next pages should follow same pattern with persona-specific messaging
+
+## Current Task: Engineers Landing Page
+
+**Objective:** Create `/engineers` persona landing page following the same 7-section structure
+
+**Target Audience:** Building/Electrical Engineers (30-60, consulting firms, 5-100 employees)
+
+**Key Focus Areas (per PRD):**
+- Technical credentials (NICET IV, NFPA membership)
+- CAD capabilities and specification support
+- Code compliance expertise
+- Complex project examples
+- Collaborative design process
+- Downloadable resources (CAD details, spec sheets)
+
+**Pain Points to Address:**
+- Contractors who can't execute their specifications
+- Poor system design requiring costly change orders
+- Outdated knowledge of current codes and standards
+- Difficulty finding technically competent local partners
+
+**7 Sections to Implement:**
+1. **Hero** - "Partner with NICET Level IV Certified Engineers Who Speak Your Language"
+2. **Pain Point Grid** - 3 cards addressing technical execution challenges
+3. **Process Overview** - 4-step collaborative design process
+4. **Case Study** - Complex project (research facility or healthcare)
+5. **Trust Elements** - NICET IV, CAD, NFPA, C-10, 24+ years
+6. **FAQ** - 4 technical questions about specs, CAD, codes, collaboration
+7. **Conversion Form** - Engineer-specific fields (project type, spec requirements, etc.)
+
+**Engineer-Specific Form Fields:**
+- Project type (New construction, Retrofit, System upgrade)
+- Specification requirements (Need CAD support, Need specs written, Need peer review)
+- System complexity (Simple, Complex, High-rise, Healthcare, Industrial)
+- Drawing upload option (future enhancement)
+
+**Confidence:** 95% - Clear pattern established from GC and PM pages
