@@ -13,3 +13,18 @@
 2026-03-02T21:30:14.015963Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
 2026-03-02T21:30:14.015968Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
 2026-03-02T21:30:14.015995Z  INFO ralph_core::event_loop: Injecting scratchpad (4511 chars) into prompt
+2026-03-02T21:32:09.865985Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="/home/buckleyrobinson/projects/fdu-website"
+2026-03-02T21:32:09.866016Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
+2026-03-02T21:32:09.866025Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-03-02T21:32:09.866031Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:32:09.866056Z  INFO ralph_core::event_loop: Injecting scratchpad (6886 chars) into prompt
+2026-03-02T21:35:13.178881Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="/home/buckleyrobinson/projects/fdu-website"
+2026-03-02T21:35:13.178911Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
+2026-03-02T21:35:13.178918Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-03-02T21:35:13.178923Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:35:13.178942Z  INFO ralph_core::event_loop: Injecting scratchpad (10021 chars) into prompt
+2026-03-02T21:36:25.619313Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="/home/buckleyrobinson/projects/fdu-website"
+2026-03-02T21:36:25.619381Z  INFO ralph_core::event_loop: Looking for memories at: "/home/buckleyrobinson/projects/fdu-website/.ralph/agent/memories.md" (exists: false)
+2026-03-02T21:36:25.619391Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-03-02T21:36:25.619398Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-03-02T21:36:25.619428Z  INFO ralph_core::event_loop: Injecting scratchpad (10021 chars) into prompt
