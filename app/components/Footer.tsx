@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                <span className="text-[#1B365D] font-bold text-lg">FDU</span>
+                <span className="text-[#1B365D] font-bold text-lg" style={{ color: '#1B365D' }}>FDU</span>
               </div>
               <div>
                 <span className="font-bold text-lg leading-tight block">Fire Detection</span>

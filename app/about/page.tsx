@@ -69,17 +69,13 @@ export default function AboutPage() {
                   </Link>
                 </Button>
                 
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
-                  asChild
+                <a 
+                  href="tel:+19256764444"
+                  className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6 rounded-md transition-colors group"
                 >
-                  <a href="tel:+19256764444" className="flex items-center">
-                    <Phone className="mr-2 h-5 w-5" />
-                    (925) 676-4444
-                  </a>
-                </Button>
+                  <Phone className="mr-2 h-5 w-5" />
+                  (925) 676-4444
+                </a>
               </div>
             </div>
           </div>
@@ -216,17 +212,13 @@ export default function AboutPage() {
                 </Link>
               </Button>
               
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
-                asChild
+              <a 
+                href="tel:+19256764444"
+                className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6 rounded-md transition-colors"
               >
-                <a href="tel:+19256764444" className="flex items-center">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call (925) 676-4444
-                </a>
-              </Button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call (925) 676-4444
+              </a>
             </div>
           </div>
         </div>
