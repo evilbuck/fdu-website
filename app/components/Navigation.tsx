@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -50,15 +51,19 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E2E8F0] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-[#1B365D] rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-lg">FDU</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-2 -ml-2">
+              <Image
+                src="/fdu-grok-logo.png"
+                alt="Fire Detection Unlimited"
+                width={180}
+                height={90}
+                className="h-20 w-auto -my-4"
+              />
               <div className="hidden sm:block">
                 <span className="text-[#1B365D] font-bold text-lg leading-tight block">Fire Detection</span>
                 <span className="text-[#1B365D] text-xs">Unlimited, Inc.</span>
