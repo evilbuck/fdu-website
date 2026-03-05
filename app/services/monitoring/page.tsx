@@ -51,8 +51,8 @@ export default function MonitoringPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-                Protect your property around the clock with UL-listed central station monitoring. 
-                When seconds count, we're watching.
+                Protect your property around the clock with UL-listed central station monitoring.
+                When seconds count, we&apos;re watching.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -70,7 +70,7 @@ export default function MonitoringPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -153,7 +153,7 @@ export default function MonitoringPage() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
                 asChild
               >
                 <a href="tel:+19256764444" className="flex items-center">

@@ -71,7 +71,7 @@ export default function AboutPage() {
                 
                 <a 
                   href="tel:+19256764444"
-                  className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6 rounded-md transition-colors group"
+                  className="inline-flex items-center justify-center border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6 rounded-md transition-colors group"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   (925) 676-4444
@@ -214,7 +214,7 @@ export default function AboutPage() {
               
               <a 
                 href="tel:+19256764444"
-                className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6 rounded-md transition-colors"
+                className="inline-flex items-center justify-center border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6 rounded-md transition-colors"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call (925) 676-4444

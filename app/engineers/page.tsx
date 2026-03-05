@@ -112,7 +112,7 @@ export default function EngineersPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -136,7 +136,7 @@ export default function EngineersPage() {
               Engineering Challenges, Solved
             </h2>
             <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-              Technical projects require technical partners. Here's how FDU delivers engineering excellence:
+              Technical projects require technical partners. Here&apos;s how FDU delivers engineering excellence:
             </p>
           </div>
 
@@ -231,9 +231,9 @@ export default function EngineersPage() {
                 </div>
                 
                 <blockquote className="border-l-4 border-[#FF6B35] pl-4 italic text-[#64748B] mb-6">
-                  "FDU's NICET IV engineers understood our complex requirements immediately. 
-                  Their submittals were thorough, their questions were intelligent, and the 
-                  installation matched our specifications exactly."
+                  &quot;FDU&apos;s NICET IV engineers understood our complex requirements immediately.
+                  Their submittals were thorough, their questions were intelligent, and the
+                  installation matched our specifications exactly.&quot;
                 </blockquote>
                 <p className="text-sm text-[#2C3E50] font-medium">
                   — Fire Protection Engineer, Consulting Firm
@@ -349,7 +349,7 @@ export default function EngineersPage() {
                 Ready for a Technical Partnership?
               </h2>
               <p className="text-lg text-white/80 mb-8">
-                Let's discuss your specifications, review your project requirements, or explore how we can support your design process.
+                Let&apos;s discuss your specifications, review your project requirements, or explore how we can support your design process.
               </p>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg text-white/80 text-sm">
                 <Phone className="w-4 h-4" />
@@ -494,7 +494,7 @@ export default function EngineersPage() {
                 <div className="flex items-center gap-2">
                   <Download className="w-5 h-5 text-[#4A90E2]" />
                   <span className="text-sm text-[#64748B]">
-                    Need CAD samples or spec sheets? Mention it above and we'll include them in our response.
+                    Need CAD samples or spec sheets? Mention it above and we&apos;ll include them in our response.
                   </span>
                 </div>
 
@@ -508,7 +508,7 @@ export default function EngineersPage() {
                 </Button>
 
                 <p className="text-sm text-[#64748B] text-center">
-                  We'll respond within 24 business hours with technical guidance and next steps.
+                  We&apos;ll respond within 24 business hours with technical guidance and next steps.
                 </p>
               </form>
             </div>

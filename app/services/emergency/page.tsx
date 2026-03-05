@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Shield, Clock, CheckCircle, Zap, Wrench, AlertTriangle } from "lucide-react";
+import { CheckCircle, Zap, AlertTriangle } from "lucide-react";
 
 export default function EmergencyPage() {
   const services = [

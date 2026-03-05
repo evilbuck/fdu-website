@@ -19,7 +19,7 @@ export default function Brands() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We service and install all major fire alarm brands. Our certified technicians are trained to work with equipment from the industry's top manufacturers.
+            We service and install all major fire alarm brands. Our certified technicians are trained to work with equipment from the industry&apos;s top manufacturers.
           </p>
         </div>
         

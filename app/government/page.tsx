@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, CheckCircle, Clock, Shield, FileCheck, Landmark, Award, Users, ChevronDown, ChevronUp, FileText } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, Clock, Shield, FileCheck, Landmark, Award, ChevronDown, ChevronUp, FileText } from "lucide-react";
 import { useState } from "react";
 
 export default function GovernmentPage() {
@@ -111,7 +111,7 @@ export default function GovernmentPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -135,7 +135,7 @@ export default function GovernmentPage() {
               Meeting Public Sector Requirements Made Simple
             </h2>
             <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-              We understand the unique challenges of public procurement. Here's how FDU delivers excellence while meeting your compliance needs:
+              We understand the unique challenges of public procurement. Here&apos;s how FDU delivers excellence while meeting your compliance needs:
             </p>
           </div>
 
@@ -230,9 +230,9 @@ export default function GovernmentPage() {
                 </div>
                 
                 <blockquote className="border-l-4 border-[#FF6B35] pl-4 italic text-[#64748B] mb-6">
-                  "FDU delivered exceptional work while meeting all our procurement requirements. 
-                  Their DVBE status helped us meet diversity goals, and their technical expertise 
-                  ensured every school was fully code compliant."
+                  &quot;FDU delivered exceptional work while meeting all our procurement requirements.
+                  Their DVBE status helped us meet diversity goals, and their technical expertise
+                  ensured every school was fully code compliant.&quot;
                 </blockquote>
                 <p className="text-sm text-[#2C3E50] font-medium">
                   — Facilities Director, Bay Area School District
@@ -328,7 +328,7 @@ export default function GovernmentPage() {
                 Ready to Partner with a DVBE Certified Contractor?
               </h2>
               <p className="text-lg text-white/80">
-                Free consultation and detailed proposal within 48 hours. Let's discuss your public sector project needs.
+                Free consultation and detailed proposal within 48 hours. Let&apos;s discuss your public sector project needs.
               </p>
             </div>
 

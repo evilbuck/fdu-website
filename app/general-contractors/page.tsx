@@ -111,7 +111,7 @@ export default function GeneralContractorsPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -135,7 +135,7 @@ export default function GeneralContractorsPage() {
               Eliminate Fire Alarm Headaches
             </h2>
             <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-              Fire alarm delays can halt multi-million dollar projects. Here's how FDU keeps you on track:
+              Fire alarm delays can halt multi-million dollar projects. Here&apos;s how FDU keeps you on track:
             </p>
           </div>
 
@@ -230,8 +230,8 @@ export default function GeneralContractorsPage() {
                 </div>
                 
                 <blockquote className="border-l-4 border-[#FF6B35] pl-4 italic text-[#64748B] mb-6">
-                  "FDU kept us on schedule through a complex installation. Their Design-Build approach 
-                  eliminated the usual coordination headaches."
+                  &quot;FDU kept us on schedule through a complex installation. Their Design-Build approach
+                  eliminated the usual coordination headaches.&quot;
                 </blockquote>
                 <p className="text-sm text-[#2C3E50] font-medium">
                   — Project Manager, Leading Bay Area GC

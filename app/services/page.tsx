@@ -81,7 +81,7 @@ export default function ServicesPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -103,7 +103,7 @@ export default function ServicesPage() {
               Our Services
             </h2>
             <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-              Complete fire alarm solutions tailored to your property's unique requirements
+              Complete fire alarm solutions tailored to your property&apos;s unique requirements
             </p>
           </div>
           
@@ -237,7 +237,7 @@ export default function ServicesPage() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
                 asChild
               >
                 <a href="tel:+19256764444" className="flex items-center">

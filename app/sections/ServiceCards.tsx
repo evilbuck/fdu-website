@@ -74,7 +74,7 @@ export default function ServiceCards() {
             Comprehensive Fire Safety Solutions
           </h2>
           <p className="text-lg text-[#64748B]">
-            From initial design through ongoing maintenance, we're your single partner 
+            From initial design through ongoing maintenance, we&apos;re your single partner
             for complete fire alarm and life safety systems.
           </p>
         </motion.div>

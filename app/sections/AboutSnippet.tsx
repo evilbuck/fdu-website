@@ -62,9 +62,9 @@ export default function AboutSnippet() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Founded in 2001 in Concord, California, Fire Detection Unlimited has grown from a small 
-                local contractor to a trusted regional leader in fire alarm and life safety systems. 
-                For over 24 years, we've protected businesses throughout the Bay Area and Sacramento region.
+                Founded in 2001 in Concord, California, Fire Detection Unlimited has grown from a small
+                local contractor to a trusted regional leader in fire alarm and life safety systems.
+                For over 24 years, we&apos;ve protected businesses throughout the Bay Area and Sacramento region.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -72,9 +72,9 @@ export default function AboutSnippet() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                Led by USMC Veteran Richard C. Pulver, our team brings military discipline and precision 
-                to every project. With NICET Level IV certification and C-10 licensing, we deliver 
-                engineering excellence that national competitors can't match with the personal attention 
+                Led by USMC Veteran Richard C. Pulver, our team brings military discipline and precision
+                to every project. With NICET Level IV certification and C-10 licensing, we deliver
+                engineering excellence that national competitors can&apos;t match with the personal attention
                 that only a family business can provide.
               </motion.p>
               <motion.p
@@ -83,7 +83,7 @@ export default function AboutSnippet() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                We're not just installing fire alarm systems—we're building lasting partnerships 
+                We&apos;re not just installing fire alarm systems—we&apos;re building lasting partnerships
                 with the businesses that keep our community safe.
               </motion.p>
             </div>
@@ -104,7 +104,7 @@ export default function AboutSnippet() {
               </Link>
               <Link
                 href="/about/leadership"
-                className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Meet Our Team
               </Link>

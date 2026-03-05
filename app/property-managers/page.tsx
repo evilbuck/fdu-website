@@ -111,7 +111,7 @@ export default function PropertyManagersPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -135,7 +135,7 @@ export default function PropertyManagersPage() {
               Escape the Proprietary Trap
             </h2>
             <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-              Fire alarm systems shouldn't lock you into expensive contracts or leave you stranded during emergencies.
+              Fire alarm systems shouldn&apos;t lock you into expensive contracts or leave you stranded during emergencies.
             </p>
           </div>
 
@@ -229,8 +229,8 @@ export default function PropertyManagersPage() {
                 </div>
                 
                 <blockquote className="border-l-4 border-[#FF6B35] pl-4 italic text-[#64748B] mb-6">
-                  "Switching to FDU's non-proprietary systems cut our fire alarm costs by over a third. 
-                  The 24/7 monitoring gives us peace of mind, and emergency response is actually fast."
+                  &quot;Switching to FDU&apos;s non-proprietary systems cut our fire alarm costs by over a third.
+                  The 24/7 monitoring gives us peace of mind, and emergency response is actually fast.&quot;
                 </blockquote>
                 <p className="text-sm text-[#2C3E50] font-medium">
                   — Director of Operations, Bay Area Property Management

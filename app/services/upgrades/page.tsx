@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Shield, Clock, CheckCircle, BarChart3, RefreshCw, ArrowUpCircle } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, BarChart3, RefreshCw, ArrowUpCircle } from "lucide-react";
 
 export default function UpgradesPage() {
   const upgradeOptions = [
@@ -74,7 +74,7 @@ export default function UpgradesPage() {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#1B365D] font-semibold text-base px-8 py-6"
                   asChild
                 >
                   <a href="tel:+19256764444" className="flex items-center">
@@ -163,7 +163,7 @@ export default function UpgradesPage() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#FF6B35] font-semibold text-base px-8 py-6"
                 asChild
               >
                 <a href="tel:+19256764444" className="flex items-center">

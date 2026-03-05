@@ -79,7 +79,7 @@ export default function PersonaPathways() {
             Solutions Tailored to Your Role
           </h2>
           <p className="text-lg text-[#64748B]">
-            Whether you're managing a construction project, overseeing a property portfolio, 
+            Whether you&apos;re managing a construction project, overseeing a property portfolio,
             designing building systems, or procuring for the public sector—we speak your language.
           </p>
         </motion.div>

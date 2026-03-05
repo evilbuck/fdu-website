@@ -90,6 +90,7 @@
 ## Low Priority / Nice to Have
 
 ## Completed
+- [x] Fix white-on-white phone CTA buttons across service/persona pages (2026-03-05) - Added explicit transparent background override for white outline CTAs and verified with Playwright
 - [x] [Fix 404: Missing /about/partners page](#bug-missing-partners-page) (2026-03-04) - Created Technology Partners page
 - [x] [Fix 404: Missing /privacy page](#bug-missing-privacy-page) (2026-03-04) - Created privacy policy page
 - [x] [Fix 404: Missing /terms page](#bug-missing-terms-page) (2026-03-04) - Created terms of service page
