@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { ArrowRight, HardHat, Building2, GraduationCap, Landmark } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { useRef } from "react";
 
 const personas = [
   {
@@ -51,17 +52,61 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 40, scale: 0.95, rotateX: 10 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
+    rotateX: 0,
     transition: {
       duration: 0.5,
       ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 };
+
+// 3D Tilt Card Component
+function TiltPersonaCard({ children, className }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  
+  const x = useMotionValue(0.5);
+  const y = useMotionValue(0.5);
+  
+  const rotateX = useSpring(useTransform(y, [0, 1], [8, -8]), { stiffness: 300, damping: 30 });
+  const rotateY = useSpring(useTransform(x, [0, 1], [-8, 8]), { stiffness: 300, damping: 30 });
+  
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const xPos = (e.clientX - rect.left) / rect.width;
+    const yPos = (e.clientY - rect.top) / rect.height;
+    x.set(xPos);
+    y.set(yPos);
+  };
+  
+  const handleMouseLeave = () => {
+    x.set(0.5);
+    y.set(0.5);
+  };
+  
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d",
+        perspective: 1000,
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      whileHover={{ y: -10, transition: { duration: 0.2 } }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function PersonaPathways() {
   return (
@@ -91,48 +136,51 @@ export default function PersonaPathways() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
+          style={{ perspective: 1000 }}
         >
           {personas.map((persona, index) => (
-            <motion.div
+            <TiltPersonaCard
               key={index}
-              variants={cardVariants}
-              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="h-full"
             >
-              <Link
-                href={persona.href}
-                className="group block bg-[#F8FAFC] rounded-xl p-6 hover:bg-[#1B365D] transition-all duration-300 h-full"
-              >
-                {/* Icon */}
-                <motion.div 
-                  className="w-12 h-12 rounded-lg bg-[#1B365D] group-hover:bg-[#FF6B35] flex items-center justify-center mb-4 transition-colors"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              <motion.div variants={cardVariants} style={{ transformStyle: "preserve-3d", height: "100%" }}>
+                <Link
+                  href={persona.href}
+                  className="group block bg-[#F8FAFC] rounded-xl p-6 hover:bg-[#1B365D] transition-all duration-300 h-full"
                 >
-                  <persona.icon className="h-6 w-6 text-white" />
-                </motion.div>
+                  {/* Icon */}
+                  <motion.div 
+                    className="w-12 h-12 rounded-lg bg-[#1B365D] group-hover:bg-[#FF6B35] flex items-center justify-center mb-4 transition-colors"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    style={{ transform: "translateZ(30px)" }}
+                  >
+                    <persona.icon className="h-6 w-6 text-white" />
+                  </motion.div>
 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-[#1B365D] group-hover:text-white mb-2 transition-colors">
-                  {persona.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-[#1B365D] group-hover:text-white mb-2 transition-colors" style={{ transform: "translateZ(20px)" }}>
+                    {persona.title}
+                  </h3>
 
-                {/* Headline */}
-                <p className="text-[#FF6B35] font-semibold text-sm mb-3">
-                  {persona.headline}
-                </p>
+                  {/* Headline */}
+                  <p className="text-[#FF6B35] font-semibold text-sm mb-3" style={{ transform: "translateZ(15px)" }}>
+                    {persona.headline}
+                  </p>
 
-                {/* Description */}
-                <p className="text-[#64748B] group-hover:text-white/80 text-sm mb-4 leading-relaxed transition-colors">
-                  {persona.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-[#64748B] group-hover:text-white/80 text-sm mb-4 leading-relaxed transition-colors" style={{ transform: "translateZ(10px)" }}>
+                    {persona.description}
+                  </p>
 
-                {/* CTA */}
-                <div className="inline-flex items-center text-[#1B365D] group-hover:text-white font-semibold text-sm transition-colors">
-                  {persona.cta}
-                  <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            </motion.div>
+                  {/* CTA */}
+                  <div className="inline-flex items-center text-[#1B365D] group-hover:text-white font-semibold text-sm transition-colors" style={{ transform: "translateZ(25px)" }}>
+                    {persona.cta}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              </motion.div>
+            </TiltPersonaCard>
           ))}
         </motion.div>
       </div>

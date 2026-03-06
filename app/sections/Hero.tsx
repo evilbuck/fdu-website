@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { useRef } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,8 +30,31 @@ const itemVariants = {
 };
 
 export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  // Parallax transforms
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -250]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  
+  // Spring physics for smoother motion
+  const smoothY1 = useSpring(y1, { stiffness: 100, damping: 30 });
+  const smoothY2 = useSpring(y2, { stiffness: 100, damping: 30 });
+  const smoothContentY = useSpring(contentY, { stiffness: 100, damping: 30 });
+  const smoothScale = useSpring(scale, { stiffness: 100, damping: 30 });
+
   return (
-    <section className="relative bg-[#1B365D] text-white overflow-hidden">
+    <motion.section 
+      ref={containerRef}
+      className="relative bg-[#1B365D] text-white overflow-hidden" 
+      style={{ scale: smoothScale }}
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -38,29 +62,26 @@ export default function Hero() {
         }} />
       </div>
       
-      {/* Decorative Elements with Animations */}
-      <motion.div 
+      {/* Decorative Elements with Parallax */}
+      <motion.div
         className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#FF6B35]/10 to-transparent hidden lg:block"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        style={{ y: smoothY2 }}
       />
-      <motion.div 
+      <motion.div
         className="absolute top-20 right-20 w-64 h-64 bg-[#FF6B35]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        style={{ y: smoothY1 }}
       />
       <motion.div
         className="absolute top-40 right-40 w-32 h-32 bg-[#FF6B35]/10 rounded-full blur-2xl hidden lg:block"
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        style={{ y: smoothY2 }}
       />
       
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="py-20 md:py-28 lg:py-32">
-          <motion.div 
+        <motion.div className="py-20 md:py-28 lg:py-32" style={{ opacity, y: smoothContentY }}>
+          <motion.div
             className="max-w-3xl"
             initial="hidden"
             animate="visible"
@@ -182,8 +203,8 @@ export default function Hero() {
               </motion.div>
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
